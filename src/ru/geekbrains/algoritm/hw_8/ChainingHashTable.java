@@ -1,5 +1,7 @@
 package ru.geekbrains.algoritm.hw_8;
 
+import java.util.Arrays;
+
 public class ChainingHashTable<Key,Value> {
     private int M;
     private int size=0;
@@ -111,7 +113,7 @@ public class ChainingHashTable<Key,Value> {
             }
         }
         st=null;
-        Object[] st=cht.st;
+        st= Arrays.copyOf(cht.st,newM);
         M=newM;
         size=cht.size;
     }
